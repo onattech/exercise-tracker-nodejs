@@ -19,14 +19,17 @@ app.use(express.static("public"))
 // add-user Route
 app.post("/api/exercise/new-user", async (req, res) => {
   try {
-    console.log("At home") //?
     let userRegistered = await Log.findOne({ username: req.body.username })
     if (!userRegistered) {
       const username = new Log({
         username: req.body.username,
       })
+
       await username.save()
-      res.send(username)
+      res.send({
+        "username" : req.body.username,
+        "_id" : username._id
+      })
     } else {
       res.status(400).send("Username already taken")
     }
