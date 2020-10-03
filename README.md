@@ -1,5 +1,6 @@
-<a href="https://url-shortener-loku.herokuapp.com/">
-  <img src="https://exercise-tracker-loku.herokuapp.com/"  height="22">
+
+<a href="https://exercise-tracker-loku.herokuapp.com/">
+  <img src="https://img.shields.io/badge/Online_at_Heroku-430098?logo=heroku"  height="22">
 </a>  
 
 # exercise-tracker-nodejs
